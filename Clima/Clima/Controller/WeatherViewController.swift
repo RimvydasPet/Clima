@@ -22,6 +22,7 @@ class WeatherViewController: UIViewController {
         super.viewDidLoad()
         
         locationManager.delegate = self
+//        pop on screen, allow location? plus Info.plist
         locationManager.requestWhenInUseAuthorization()
         locationManager.requestLocation()
         
@@ -31,8 +32,10 @@ class WeatherViewController: UIViewController {
 
 }
 
-//MARK: - UITextFieldDelegate
 
+
+
+//MARK: - UITextFieldDelegate
 extension WeatherViewController: UITextFieldDelegate {
     
     @IBAction func searchPressed(_ sender: UIButton) {
@@ -65,8 +68,6 @@ extension WeatherViewController: UITextFieldDelegate {
 }
 
 //MARK: - WeatherManagerDelegate
-
-
 extension WeatherViewController: WeatherManagerDelegate {
     
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel) {
@@ -83,8 +84,6 @@ extension WeatherViewController: WeatherManagerDelegate {
 }
 
 //MARK: - CLLocationManagerDelegate
-
-
 extension WeatherViewController: CLLocationManagerDelegate {
     
     @IBAction func locationPressed(_ sender: UIButton) {

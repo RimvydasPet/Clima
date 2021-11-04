@@ -11,11 +11,11 @@ struct WeatherModel {
     let conditionId: Int
     let cityName: String
     let temperature: Double
-    //    Specify format
+//    Specify format
     var temperatureString: String {
         return String(format: "%.1f", temperature)
     }
-    //    Computed property 
+//    Computed property 
     var conditionName: String {
         switch conditionId {
         case 200...232:
